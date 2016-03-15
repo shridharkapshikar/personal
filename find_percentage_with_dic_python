@@ -1,0 +1,23 @@
+N=int(raw_input())
+marks={}
+if N in range(2,10):
+    while N>0:
+        data=raw_input()
+       
+       
+        z=data.split(' ')
+        name=z[0]
+        mark=z[1:]
+        mark=map(float,mark)
+        if len(mark)!=0:
+            avg=sum(mark)/len(mark)
+            marks[name]="%.2f" % avg
+       
+       
+       
+       
+        N-=1
+   
+    new=raw_input()
+    if new in marks:
+        print marks[new]
